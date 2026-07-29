@@ -12,12 +12,14 @@ MODELS_DIR = os.path.join(PROJECT_ROOT, "models")
 TRAIN_FILE = os.path.join(DATA_DIR, "train.csv")
 TEST_FILE = os.path.join(DATA_DIR, "test.csv")
 MODEL_FILE = os.path.join(MODELS_DIR, "abpr_model.pkl")
-TARGET_COLUMN = "y"
+TARGET_COLUMN = "target"
 
 # Model configs
 CONFIGS = {
-    "latent_lr": 0.0,                     
+    "max_degree": 20,     
+    "max_iter": 500,                 
     "evidence_tol": 0.05,
+    "latent_lr": 0.0,
 }
 
 def main():
